@@ -4,18 +4,20 @@ require_once 'Libro.php';
 require_once 'Manuale.php';
 //creazione di un oggetto
 $libro1 = new Libro('La Divina Commedia', 'Dante Alighieri');
-//$libro1->titolo ='La divina commedia';
+//$libro1->titolo ='La divina commedia'; definizione del valore se non si usa la funzione __construct
 $libro1->numero_pagine = 300;
 
 $libro2 = new Libro('I promessi sposi', 'Alessandro Manzoni');
 // $libro2->titolo = 'I promessi sposi';
 $libro2->numero_pagine = 250;
 
+//stampa degli oggetti
 echo '<pre>';
 var_dump($libro1);
 var_dump($libro2);
 echo '<pre>';
 
+//uso della funzione con accesso ai valori tramite l'operatore -> e stampa dei risultati
 $tempo_libro1 = $libro1->tempo_lettura(5); //5 è il tempo impiegato per leggere una pagina 1 minuto per pagina
 $tempo_libro2 = $libro2->tempo_lettura(3); //parametro effettivo della funzione
 echo "Per leggere " . $libro1->titolo . " impieghi " . $tempo_libro1 . ' minuti, ';
@@ -27,6 +29,7 @@ $manuale1->numero_pagine = 150;
 $manuale2 = new Manuale ('Programmare in Javascript', 'Pluto', 'Javascript');
 $manuale2->numero_pagine = 100;
 
+//stampa degli oggetti con extends
 echo '<pre>';
 var_dump($manuale1);
 var_dump($manuale2);
